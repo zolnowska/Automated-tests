@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eb1345f-f3b3-4d66-aa1d-37718a1b017c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/test_data/manage_test_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/create_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/create_account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create_account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/random_data/generate_random_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/generate_random_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/create_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/create_account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/login_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/login_in.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,23 +20,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49764705">
+    <splitter split-orientation="horizontal" split-proportion="0.49186483">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/configuration/users.json">
+            <entry file="file://$PROJECT_DIR$/test_data/users.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3774">
-                  <caret line="222" column="18" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="create_account.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/locators/create_account.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="626">
+                  <caret line="321" selection-start-line="321" selection-end-line="321" />
                 </state>
               </provider>
             </entry>
@@ -37,16 +36,21 @@
             <entry file="file://$PROJECT_DIR$/locators/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
-                  <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="64" />
+                  <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
                 </state>
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/home.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
           <file leaf-file-name="generate_random_data.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/random_data/generate_random_data.py">
+            <entry file="file://$PROJECT_DIR$/test_data/generate_random_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="27" column="31" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="31" />
+                <state relative-caret-position="-349">
+                  <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
@@ -54,20 +58,49 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sandbox.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sandbox/sandbox.py">
+          <file leaf-file-name="manage_test_data.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test_data/manage_test_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
+                <state relative-caret-position="374">
+                  <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="python.gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/configuration/python.gitignore">
+          <file leaf-file-name="create_account.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/create_account.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="544">
+                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/header.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/base.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-145">
+                  <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -81,31 +114,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="create_account.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/create_account.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1938">
-                  <caret line="124" column="46" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home_page.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/locators/home_page.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="43" selection-start-column="43" selection-end-column="43" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="log_in.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/log_in.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="34">
                   <caret line="2" selection-start-line="2" selection-end-line="2" />
                   <folding>
                     <element signature="e#0#27#0" expanded="true" />
@@ -118,37 +130,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="login_in.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="login_in.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/login_in.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
-                  <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="create_account.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/create_account.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="43" selection-start-line="43" selection-end-line="43" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/home.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/base.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -156,21 +142,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+          <file leaf-file-name="create_account.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/create_account.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="473">
-                  <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="header.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/header.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="663">
+                  <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
                   <folding>
-                    <element signature="e#0#27#0" expanded="true" />
+                    <element signature="e#0#15#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -217,18 +195,21 @@
         <option value="$PROJECT_DIR$/sanbox.py" />
         <option value="$PROJECT_DIR$/configuration/users.py" />
         <option value="$PROJECT_DIR$/pages/log_in.py" />
-        <option value="$PROJECT_DIR$/tests/login_in.py" />
         <option value="$PROJECT_DIR$/sandbox.py" />
-        <option value="$PROJECT_DIR$/sandbox/sandbox.py" />
-        <option value="$PROJECT_DIR$/locators/create_account.py" />
         <option value="$PROJECT_DIR$/random_data/generate_random_data.py" />
         <option value="$PROJECT_DIR$/pages/create_account.py" />
         <option value="$PROJECT_DIR$/pages/base.py" />
         <option value="$PROJECT_DIR$/configuration/users.json" />
-        <option value="$PROJECT_DIR$/tests/create_account.py" />
         <option value="$PROJECT_DIR$/configuration/python.gitignore.py" />
         <option value="$PROJECT_DIR$/configuration/python.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tests/login_in.py" />
+        <option value="$PROJECT_DIR$/test_data/generate_random_data.py" />
+        <option value="$PROJECT_DIR$/locators/create_account.py" />
+        <option value="$PROJECT_DIR$/tests/create_account.py" />
+        <option value="$PROJECT_DIR$/sandbox/sandbox.py" />
+        <option value="$PROJECT_DIR$/test_data/users.json" />
+        <option value="$PROJECT_DIR$/test_data/manage_test_data.py" />
       </list>
     </option>
   </component>
@@ -255,6 +236,26 @@
             <path>
               <item name="Automated-tests" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automated-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automated-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="locators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automated-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automated-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automated-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated-tests" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -269,10 +270,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sabina\Documents\GitHub\Automated-tests\test_data" />
+      <recent name="C:\Users\Sabina\Documents\GitHub\Automated-tests\data" />
       <recent name="C:\Users\Sabina\PycharmProjects\PrestaShop 1.7.5.0" />
       <recent name="C:\Users\Sabina\PycharmProjects\PrestaShop 1.7.5.0\sandbox" />
       <recent name="C:\Users\Sabina\PycharmProjects\PrestaShop 1.7.5.0\configuration" />
-      <recent name="C:\Users\Sabina\PycharmProjects\PrestaShop 1.7.5.0\random_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,7 +290,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Python tests.Unittests in login_in.py">
-    <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PrestaShop 1.7.5.0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox/sandbox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Unittests for create_account.CreateAccountTest.test_create_account" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="PrestaShop 1.7.5.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,7 +318,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate&quot;" />
+      <option name="_new_target" value="&quot;create_account.CreateAccountTest.test_create_account&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -312,19 +332,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;create_account.CreateAccountTest.test_create_account_opposite_order&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_used_email" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="PrestaShop 1.7.5.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;create_account.CreateAccountTest.test_create_account_used_email&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests in create_account.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -355,18 +362,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in create_account.py" />
-      <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_used_email" />
-      <item itemvalue="Python tests.Unittests in login_in.py" />
-      <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" />
+      <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account" />
       <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" />
+      <item itemvalue="Python.sandbox" />
+      <item itemvalue="Python tests.Unittests in login_in.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in login_in.py" />
         <item itemvalue="Python tests.Unittests in create_account.py" />
         <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" />
-        <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" />
-        <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account_used_email" />
+        <item itemvalue="Python.sandbox" />
+        <item itemvalue="Python tests.Unittests for create_account.CreateAccountTest.test_create_account" />
       </list>
     </recent_temporary>
   </component>
@@ -392,44 +399,46 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 13h 42m 50s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 13h 51m 38s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 13h 56m 54s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 13h 57m 48s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 14h 11m 37s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 14h 12m 02s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_direct_url_no_birthdate - 2019.10.12 at 14h 13m 09s.xml">
-      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_direct_url_no_birthdate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_opposite_order - 2019.10.12 at 16h 52m 49s.xml">
+    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_opposite_order - 2019.11.30 at 16h 08m 42s.xml">
       <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 12h 36m 13s.xml">
+    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 16h 09m 31s.xml">
       <configuration name="Unittests in create_account.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_login_in_py - 2019.11.30 at 12h 37m 50s.xml">
+    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 16h 13m 14s.xml">
+      <configuration name="Unittests in create_account.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 16h 14m 54s.xml">
+      <configuration name="Unittests in create_account.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account - 2019.11.30 at 16h 17m 56s.xml">
+      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_opposite_order - 2019.11.30 at 16h 18m 22s.xml">
+      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 16h 44m 37s.xml">
+      <configuration name="Unittests in create_account.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_create_account_CreateAccountTest_test_create_account_opposite_order - 2019.11.30 at 16h 53m 38s.xml">
+      <configuration name="Unittests for create_account.CreateAccountTest.test_create_account_opposite_order" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_create_account_py - 2019.11.30 at 16h 57m 11s.xml">
+      <configuration name="Unittests in create_account.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_login_in_py - 2019.11.30 at 16h 58m 17s.xml">
       <configuration name="Unittests in login_in.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15806112" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15806112" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3278867" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3278867" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -442,7 +451,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -480,23 +488,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configuration/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/random_data/generate_random_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuration/users.py" />
     <entry file="file://$PROJECT_DIR$/pages/base.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -555,7 +546,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/random_data/generate_random_data.py">
+    <entry file="file://$PROJECT_DIR$/test_data/generate_random_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
@@ -623,20 +614,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/random_data/generate_random_data.py">
+    <entry file="file://$PROJECT_DIR$/test_data/generate_random_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -659,10 +643,31 @@
     <entry file="file://$PROJECT_DIR$/screenshots/create_account-2019-08-10_16-36-40.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/login_in.py">
+    <entry file="file://$PROJECT_DIR$/configuration/python.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locators/create_account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -683,31 +688,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locators/urls.py">
+    <entry file="file://$PROJECT_DIR$/pages/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3774">
-          <caret line="222" column="18" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/locators/create_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-145">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/create_account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -723,19 +717,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/create_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="124" column="46" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pages/home.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/log_in.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -743,47 +730,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/random_data/generate_random_data.py">
+    <entry file="file://C:/Python/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="7293">
+          <caret line="442" column="8" selection-start-line="442" selection-start-column="8" selection-end-line="442" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locators/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_data/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="321" selection-start-line="321" selection-end-line="321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_data/generate_random_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/sandbox.py">
+    <entry file="file://$PROJECT_DIR$/test_data/manage_test_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="374">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/home.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/base.py">
+    <entry file="file://$PROJECT_DIR$/tests/create_account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="663">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/python.gitignore">
+    <entry file="file://$PROJECT_DIR$/tests/login_in.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

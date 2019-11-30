@@ -4,11 +4,10 @@ from pages.header import Header
 from pages.log_in import LogIn
 from pages.create_account import CreateAccount
 from locators import urls
-from random_data.generate_random_data import generate_unique_email
-from random_data.generate_random_data import save_new_user
+from test_data.generate_random_data import generate_unique_email
+from test_data.manage_test_data import save_new_user
 from datetime import datetime
-
-from time import sleep
+import os
 
 
 class CreateAccountTest(unittest.TestCase):
@@ -20,6 +19,10 @@ class CreateAccountTest(unittest.TestCase):
         self.driver = webdriver.Chrome(options=options)
         self.driver.maximize_window()
         self.driver.get(urls.home_page)
+        try:
+            os.makedirs("../screenshots")
+        except FileExistsError:
+            pass
 
     def test_create_account(self):
         email = generate_unique_email()
@@ -46,7 +49,7 @@ class CreateAccountTest(unittest.TestCase):
             save_new_user(email, gender, first_name, last_name, password, birthdate, created="Not_sure")
             raise e
 
-    #data capslock
+    #test_data capslock
 
     def test_create_account_used_email(self):
         email = "test@test.test"
@@ -132,14 +135,8 @@ class CreateAccountTest(unittest.TestCase):
             save_new_user(email, gender, first_name, last_name, password, brithdate, created="Not_sure")
             raise e
 
-
-    #input all correct, in mixed order except password, just press "SHOW" password
-
-
-
     def tearDown(self):
         self.driver.close()
 
     if __name__ == '__main__':
         unittest.main()
-

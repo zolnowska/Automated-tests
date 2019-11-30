@@ -1,6 +1,6 @@
 import random
 import string
-import json
+from test_data import manage_test_data
 
 
 def generate_unique_email():
@@ -12,36 +12,11 @@ def generate_unique_email():
 
 
 def email_is_unique(email):
-    users = get_list_of_users()
+    users = manage_test_data.get_list_of_users()
     for key in users.keys():
         if key == email:
             return False
     return True
-
-
-def get_list_of_users(path="../configuration/users.json"):
-    with open(path, "r") as read_file:
-        data = json.load(read_file)
-        return data
-
-
-def save_new_user(email: object, gender: object, first_name: object, last_name: object, password: object, birthdate: object, created: object,
-                  path: object = "../configuration/users.json") -> object:
-    data = get_list_of_users()
-    new_user = {email: {
-                "PASSWORD": password,
-                "FIRST_NAME": first_name,
-                "LAST_NAME": last_name,
-                "GENDER": gender,
-                "BIRTHDATE": birthdate,
-                "CREATED": created
-                }
-            }
-
-    data.update(new_user)
-    with open(path, "w") as write_file:
-        json.dump(data, write_file, indent=2)
-
 
 def generate_email():
     length_username = random.randint(3, 15)

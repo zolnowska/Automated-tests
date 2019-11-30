@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # Screenshots of tests
-screenshots/
+#screenshots/

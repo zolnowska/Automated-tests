@@ -1,7 +1,6 @@
 from pages.base import Base
 from locators import create_account
-from random_data.generate_random_data import generate_unique_email
-from random_data.generate_random_data import save_new_user
+from test_data.generate_random_data import generate_unique_email
 
 
 class CreateAccount(Base):
