@@ -1,6 +1,6 @@
 import random
 import string
-from test_data import manage_test_data
+from testing_data import manage_test_data
 
 
 def generate_unique_email():
