@@ -9,10 +9,10 @@ class CreateAccount(Base):
         super().__init__(driver)
 
     def choose_gender(self, gender="male"):
-        if gender is "male":
-            self.wait_and_click(create_account.RADIO_GENDER_MR)
-        elif gender is "female":
-            self.wait_and_click(create_account.RADIO_GENDER_MRS)
+        if gender == "male":
+            self.move_to_element_and_click(create_account.RADIO_GENDER_MR)
+        elif gender == "female":
+            self.move_to_element_and_click(create_account.RADIO_GENDER_MRS)
 
     def input_first_name(self, first_name="FirstName"):
         self.input(create_account.INPUT_FIRST_NAME, first_name)
@@ -29,8 +29,11 @@ class CreateAccount(Base):
     def input_birthdate(self, birthdate="01/31/1969"):
         self.input(create_account.INPUT_BIRTHDATE, birthdate)
 
+    def click_term(self):
+        self.move_to_element_and_click(create_account.CHECKBOX_TERMS)
+
     def click_save(self):
-        self.wait_and_click(create_account.BTN_SAVE)
+        self.move_to_element_and_click(create_account.BTN_SAVE)
 
     def create_account(self, email, gender, first_name, last_name, password, birthdate=""):
         self.choose_gender(gender)
@@ -39,6 +42,7 @@ class CreateAccount(Base):
         self.input_email(email)
         self.input_password(password)
         self.input_birthdate(birthdate)
+        self.click_term()
         self.click_save()
 
     def get_text_email_arleady_used(self):
@@ -46,4 +50,3 @@ class CreateAccount(Base):
 
     def get_text_first_name(self):
         return self.get_text(create_account.INPUT_FIRST_NAME)
-

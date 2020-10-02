@@ -1,10 +1,7 @@
-import unittest
-import time
-import string
-import random
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, MoveTargetOutOfBoundsException
 from selenium.webdriver import ActionChains
 from configuration import *
 
@@ -43,16 +40,27 @@ class Base(object):
     def wait_until_element(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
         WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located(locator))
 
-    def get_text(self, locator):
-        return self.find_element(locator).text
-
-    ################
-
     def wait_until_clickable_element(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
         WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
 
     def wait_until_is_not_clickable(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
         WebDriverWait(self.driver, timeout).until_not(EC.element_to_be_clickable(locator))
+
+    def wait_until_is_visibility(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+
+    def wait_until_invisibility_element(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        WebDriverWait(self.driver, timeout).until(EC.invisibility_of_element_located(locator))
+
+    ################
+
+    def get_text(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        self.wait_until_element(locator, timeout)
+        return self.find_element(locator).text
+
+    def get_text_visibly(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        self.wait_until_is_visibility(locator, timeout)
+        return self.find_element(locator).text
 
     def click_element(self, locator):
         self.find_element(locator).click()
@@ -65,7 +73,18 @@ class Base(object):
         self.wait_until_clickable_element(locator, timeout)
         self.click_element(locator)
 
+    def implicitly_wait(self, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        self.driver.implicitly_wait(timeout)
+
     #############
+
+    def scroll_until_element_is_in_the_middle_of_page(self, locator):
+        element = self.find_element(locator)
+        desired_y = (element.size['height'] / 2) + element.location['y']
+        current_y = (self.driver.execute_script('return window.innerHeight') / 2) + self.driver.execute_script(
+            'return window.pageYOffset')
+        scroll_y_by = desired_y - current_y
+        self.driver.execute_script("window.scrollBy(0, arguments[0]);", scroll_y_by)
 
     def action_chain(self):
         return ActionChains(self.driver)
@@ -82,18 +101,42 @@ class Base(object):
         action.perform()
 
     def move_to_element(self, locator):
-        element = self.find_element(locator)
-        action = self.action_chain()
-        action.move_to_element(element)
-        action.perform()
+        try:
+            element = self.find_element(locator)
+            self.wait_until_element(locator)
+            action = self.action_chain()
+            action.move_to_element(element)
+            action.perform()
+        except MoveTargetOutOfBoundsException:
+            element = self.find_element(locator)
+            self.wait_until_element(locator)
+            self.scroll_until_element_is_in_the_middle_of_page(locator)
+            action = self.action_chain()
+            action.move_to_element(element)
+            action.perform()
 
     def move_to_element_and_click(self, locator):
-        element = self.find_element(locator)
-        self.move_to_element(element).click(element).perform()
+        self.wait_until_clickable_element(locator)
+        self.move_to_element(locator)
+        self.wait_and_click(locator)
 
     def input(self, locator, keys):
         element = self.find_element(locator)
+        self.move_to_element(locator)
+        self.wait_until_clickable_element(locator)
         action = self.action_chain()
         action.click(element)
         action.send_keys(keys)
         action.perform()
+
+    ##############
+
+    def select_element_from_drop_down(self, locator, element, element_type):
+        self.move_to_element(locator)
+        select = Select(self.find_element(locator))
+        if element_type == 'id':
+            select.select_by_id(element)
+        elif element_type == 'text':
+            select.select_by_visible_text(element)
+        elif element_type == 'value':
+            select.select_by_value(element)

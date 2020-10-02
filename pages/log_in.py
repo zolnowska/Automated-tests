@@ -14,10 +14,10 @@ class LogIn(Base):
         self.input(login_in.INPUT_PASSWORD, password)
 
     def click_sign_in(self):
-        self.wait_and_click(login_in.BTN_SIGN_IN)
+        self.move_to_element_and_click(login_in.BTN_SIGN_IN)
 
     def click_create_account(self):
-        self.wait_and_click(login_in.BTN_CREATE_ACCOUNT)
+        self.move_to_element_and_click(login_in.BTN_CREATE_ACCOUNT)
 
     def log_in(self, email="test@test.test", password="test1"):
         self.input_email(email)
@@ -26,4 +26,3 @@ class LogIn(Base):
 
     def get_text_authentication_failed(self):
         return self.get_text(login_in.TEXT_AUTHENTICATION_FAILED)
-

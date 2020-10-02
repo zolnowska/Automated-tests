@@ -1,4 +1,4 @@
-from locators.cart import shipping
+from locators.checkout import shipping
 from pages.base import Base
 
 
@@ -18,4 +18,3 @@ class Shipping(Base):
     def process_shipping(self, shipping_method='My carrier'):
         self.choose_shipping_method(shipping_method)
         self.click_continue()
-

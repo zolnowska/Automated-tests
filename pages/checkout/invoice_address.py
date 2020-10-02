@@ -1,5 +1,5 @@
 from pages.base import Base
-from locators.cart import invoice_address
+from locators.checkout import invoice_address
 
 
 class InvoiceAddresses(Base):
@@ -21,7 +21,7 @@ class InvoiceAddresses(Base):
         self.input(invoice_address.INPUT_PHONE, phone)
 
     def click_cancel(self):
-        self.wait_and_click(invoice_address.BTN_CANCEL)
+        self.move_to_element_and_click(invoice_address.BTN_CANCEL)
 
     def click_continue(self):
-        self.wait_and_click(invoice_address.BTN_CONTINUE)
+        self.move_to_element_and_click(invoice_address.BTN_CONTINUE)

@@ -1,5 +1,5 @@
 from pages.base import Base
-from locators.cart import personal_information
+from locators.checkout import personal_information
 from test_data.generate_random_data import generate_unique_email
 
 
@@ -10,9 +10,9 @@ class PersonalInformation(Base):
 
     def choose_gender(self, gender="male"):
         if gender == "male":
-            self.wait_and_click(personal_information.RADIO_GENDER_MR)
+            self.move_to_element_and_click(personal_information.RADIO_GENDER_MR)
         elif gender == "female":
-            self.wait_and_click(personal_information.RADIO_GENDER_MRS)
+            self.move_to_element_and_click(personal_information.RADIO_GENDER_MRS)
 
     def input_first_name(self, first_name="FirstName"):
         self.input(personal_information.INPUT_FIRST_NAME, first_name)
@@ -30,7 +30,7 @@ class PersonalInformation(Base):
         self.input(personal_information.INPUT_BIRTHDATE, birthdate)
 
     def click_term(self):
-        self.wait_and_click(personal_information.CHECKBOX_TERMS)
+        self.move_to_element_and_click(personal_information.CHECKBOX_TERMS)
 
     def order_as_guest(self, email, gender, first_name, last_name):
         self.choose_gender(gender)
@@ -45,4 +45,4 @@ class PersonalInformation(Base):
         self.input_birthdate(birthdate)
 
     def click_continue(self):
-        self.wait_and_click(personal_information.BTN_CONTINUE)
+        self.move_to_element_and_click(personal_information.BTN_CONTINUE)
