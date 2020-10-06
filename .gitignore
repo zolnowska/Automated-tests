@@ -14,7 +14,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -89,7 +88,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.idea
+idea.*
+.misc.xml
+.PrestaShop 1.7.5.0.iml
+.workspace.xml
 
 # Spyder project settings
 .spyderproject
@@ -104,12 +106,13 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Screenshots of tests
-screenshots/
+# Reports of tests
+reports.*
 
 # webdriver
-webdriver/
+webdriver/chromedriver.exe
+webdriver/geckodriver.exe
 
-# users.json
-test_data/user.json
+
+
 
