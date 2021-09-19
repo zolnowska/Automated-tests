@@ -17,11 +17,11 @@ def driver_init(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--incoginito')
-        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+        #chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         web_driver = webdriver.Chrome(executable_path='../webdriver/chromedriver', options=chrome_options)
     elif request.param == "firefox":
         firefox_options = Options()
-        firefox_options.headless = True
+        #firefox_options.headless = True
         firefox_private = webdriver.FirefoxProfile()
         firefox_private.set_preference("browser.privatebrowsing.autostart", True)
         web_driver = Firefox(executable_path='../webdriver/geckodriver', options=firefox_options,

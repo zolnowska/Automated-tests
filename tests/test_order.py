@@ -45,19 +45,6 @@ class BasicTest:
 
 class TestOrder(BasicTest):
 
-
-    def test_hummingbird_printed_tshirt_minimal_address(self):
-        self.driver.get(Urls.HOME_PAGE)
-        home = Home(self.driver)
-        home.click_hummingbird_printed_tshirt()
-        product_page = ProductPage(self.driver)
-        product_page.choose_size('L')
-        product_page.choose_color('black')
-        product_page.increase_quantity_by(5)
-        product_page.click_add_to_cart()
-        product_page.click_proceed_to_checkout()
-        Cart(self.driver).click_proceed_to_checkout()
-
     # order product as guest with minimal necessary data in address
     def test_hummingbird_printed_tshirt_minimal_address(self):
         self.driver.get(Urls.HOME_PAGE)
