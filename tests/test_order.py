@@ -16,13 +16,13 @@ from lib.pages.checkout.invoice_address import InvoiceAddresses
 from lib.pages.checkout.shipping import Shipping
 from lib.pages.checkout.payment import Payment
 
-
 @pytest.fixture(params=["chrome", "firefox"], scope="function")
 def driver_init(request):
     if request.param == "chrome":
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--incoginito')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         web_driver = webdriver.Chrome(executable_path='../webdriver/chromedriver', options=chrome_options)
     elif request.param == "firefox":
         firefox_options = Options()
@@ -35,6 +35,7 @@ def driver_init(request):
     request.cls.driver = web_driver
     yield
     web_driver.quit()
+    web_driver.stop_client()
 
 
 @pytest.mark.usefixtures("driver_init")
@@ -43,8 +44,21 @@ class BasicTest:
 
 
 class TestOrder(BasicTest):
-    # order product as guest with minimal necessary data in address
 
+
+    def test_hummingbird_printed_tshirt_minimal_address(self):
+        self.driver.get(Urls.HOME_PAGE)
+        home = Home(self.driver)
+        home.click_hummingbird_printed_tshirt()
+        product_page = ProductPage(self.driver)
+        product_page.choose_size('L')
+        product_page.choose_color('black')
+        product_page.increase_quantity_by(5)
+        product_page.click_add_to_cart()
+        product_page.click_proceed_to_checkout()
+        Cart(self.driver).click_proceed_to_checkout()
+
+    # order product as guest with minimal necessary data in address
     def test_hummingbird_printed_tshirt_minimal_address(self):
         self.driver.get(Urls.HOME_PAGE)
         try:
@@ -53,6 +67,7 @@ class TestOrder(BasicTest):
             product_page = ProductPage(self.driver)
             product_page.choose_size('L')
             product_page.choose_color('black')
+            product_page.wait_until_hummingbird_printed_tshirt()
             product_page.increase_quantity_by(5)
             product_page.click_add_to_cart()
             product_page.click_proceed_to_checkout()
@@ -67,7 +82,7 @@ class TestOrder(BasicTest):
             Payment(self.driver).process_payment('Bank wire')
             order_confirmation = OrderConfirmation(self.driver)
             assert order_confirmation.get_information_1st_bought_item() == \
-                   'Hummingbird printed t-shirt - Size : L- Color : Black'
+                   'Hummingbird printed t-shirt - Size : L- Colour : Black'
             assert order_confirmation.get_item_cost_1st_item() == '£22.94'
             assert order_confirmation.get_quantity_1st_item() == '6'
             assert order_confirmation.get_items_cost_1st_item() == '£137.66'
@@ -115,7 +130,7 @@ class TestOrder(BasicTest):
             Payment(self.driver).process_payment('Check')
             order_confirmation = OrderConfirmation(self.driver)
             assert order_confirmation.get_information_1st_bought_item() == \
-                   'Brown bear cushion - Color : White', 'Test Passed'
+                   'Brown bear cushion - Colour : White', 'Test Passed'
             assert order_confirmation.get_item_cost_1st_item() == '£22.68'
             assert order_confirmation.get_quantity_1st_item() == '4'
             assert order_confirmation.get_items_cost_1st_item() == '£90.72'

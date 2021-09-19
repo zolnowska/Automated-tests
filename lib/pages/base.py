@@ -84,6 +84,8 @@ class Base(object):
             self.click_element(locator)
 
     def wait_and_click(self, locator, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        self.wait_until_element(locator, timeout)
+        self.wait_until_is_visibility(locator, timeout)
         self.wait_until_clickable_element(locator, timeout)
         self.click_element(locator)
 
@@ -117,19 +119,22 @@ class Base(object):
     @handler_move_target_out_of_bound_exception
     def move_to_element(self, locator):
         element = self.find_element(locator)
-        self.wait_until_element(locator)
         action = self.action_chain()
         action.move_to_element(element)
         action.perform()
 
     def move_to_element_and_click(self, locator):
-        self.wait_until_clickable_element(locator)
         self.move_to_element(locator)
+        self.wait_until_element(locator)
+        self.wait_until_is_visibility(locator)
+        self.wait_until_clickable_element(locator)
         self.wait_and_click(locator)
 
     def input(self, locator, keys):
         element = self.find_element(locator)
         self.move_to_element(locator)
+        self.wait_until_element(locator)
+        self.wait_until_is_visibility(locator)
         self.wait_until_clickable_element(locator)
         action = self.action_chain()
         action.click(element)
@@ -142,7 +147,7 @@ class Base(object):
         self.move_to_element(locator)
         select = Select(self.find_element(locator))
         if element_type == 'id':
-            select.select_by_id(element)
+            select.deselect_by_index(element)
         elif element_type == 'text':
             select.select_by_visible_text(element)
         elif element_type == 'value':

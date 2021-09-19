@@ -3,16 +3,16 @@ from lib.pages.base import Base
 
 
 class InvoiceAddressesLocators:
-    INPUT_COMPANY = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[3]/div[1]/input')
-    INPUT_VAT = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[4]/div[1]/input')
-    INPUT_ADDRESS = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[5]/div[1]/input')
-    INPUT_ADDRESS_COMPLEMENT = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[6]/div[1]/input')
-    INPUT_CITY = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[7]/div[1]/input')
-    INPUT_POSTAL_CODE = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[8]/div[1]')
-    DROP_DOWN_COUNTRY = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[9]/div[1]/select')
-    INPUT_PHONE = (By.XPATH, '//*[@id="invoice-address"]/div/section/div[10]/div[1]')
-    BTN_CANCEL = (By.XPATH, '//*[@id="invoice-address"]/div/footer/a')
-    BTN_CONTINUE = (By.XPATH, '//*[@id="invoice-address"]/div/footer/button')
+    INPUT_COMPANY = (By.XPATH, '//input[@name="company"]')
+    INPUT_VAT = (By.XPATH, '//input[@name="vat_number"]')
+    INPUT_ADDRESS = (By.XPATH, '//input[@name="address1"]')
+    INPUT_ADDRESS_COMPLEMENT = (By.XPATH, '//input[@name="address2"]')
+    INPUT_CITY = (By.XPATH, '//input[@name="city"]')
+    INPUT_POSTAL_CODE = (By.XPATH, '//input[@name="postcode"]')
+    DROP_DOWN_COUNTRY = (By.XPATH, '//select[@name="id_country"]')
+    INPUT_PHONE = (By.XPATH, '//input[@name="phone"]')
+    BTN_CANCEL = (By.XPATH, '//a[@class="js-cancel-address cancel-address float-xs-right"]')
+    BTN_CONTINUE = (By.XPATH, '//button[@name="confirm-addresses"]')
 
 
 class InvoiceAddresses(Base):

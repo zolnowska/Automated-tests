@@ -17,6 +17,7 @@ def driver_init(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--incoginito')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         web_driver = webdriver.Chrome(executable_path='../webdriver/chromedriver', options=chrome_options)
     elif request.param == "firefox":
         firefox_options = Options()
@@ -44,7 +45,7 @@ class TestCreateAccount(BasicTest):
         first_name = "FirstName"
         last_name = "LastName"
         password = "test1"
-        birthdate = "01/31/1969"
+        birthdate = "1969-01-31"
         try:
             header = Header(self.driver)
             header.click_sign_in()
@@ -75,7 +76,7 @@ class TestCreateAccount(BasicTest):
         first_name = "FIRSTNAME"
         last_name = "LASTNAME"
         password = "qwerty12345"
-        birthdate = "12/12/2000"
+        birthdate = "2000-12-12"
         try:
             header = Header(self.driver)
             header.click_sign_in()
@@ -83,7 +84,7 @@ class TestCreateAccount(BasicTest):
             login_in.click_create_account()
             create_account = CreateAccount(self.driver)
             create_account.create_account(email, gender, first_name, last_name, password, birthdate)
-            text_email_already_used = create_account.get_text_email_arleady_used()
+            text_email_already_used = create_account.get_text_email_already_used()
             current_url = create_account.get_current_url()
             assert text_email_already_used == "The email is already used, please choose another one or sign in"
             assert current_url == Urls.CREATE_ACCOUNT
@@ -133,7 +134,7 @@ class TestCreateAccount(BasicTest):
         first_name = "Фёдор Миха́йлович"
         last_name = "Достое́вский"
         password = "((((___AAAaaa)))"
-        brithdate = "29/02/1992"
+        brithdate = "1992-02-29"
         try:
             header = Header(self.driver)
             header.click_sign_in()
@@ -141,6 +142,7 @@ class TestCreateAccount(BasicTest):
             login_in.click_create_account()
             create_account = CreateAccount(self.driver)
             create_account.click_term()
+            create_account.click_customer_privacy()
             create_account.input_birthdate(brithdate)
             create_account.input_password(password)
             create_account.input_email(email)

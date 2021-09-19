@@ -11,7 +11,8 @@ class CreateAccountLocators:
     INPUT_EMAIL = (By.XPATH, '//input[@name="email"]')
     INPUT_PASSWORD = (By.XPATH, '//input[@name="password"]')
     INPUT_BIRTHDATE = (By.XPATH, '//input[@name="birthday"]')
-    CHECKBOX_TERMS = (By.XPATH, '//div[9]/div[@class="col-md-6"]/span/label')
+    CHECKBOX_CUSTOMER_PRIVACY = (By.XPATH, '//input[@name="customer_privacy"]')
+    CHECKBOX_TERMS = (By.XPATH, '//input[@name="psgdpr"]')
     BTN_SAVE = (By.XPATH, '//*[@id="customer-form"]/footer/button')
     TEXT_EMAIL_ALREADY_USED = (By.XPATH, '//li[@class="alert alert-danger"]')
 
@@ -39,11 +40,16 @@ class CreateAccount(Base):
     def input_password(self, password="test1"):
         self.input(CreateAccountLocators.INPUT_PASSWORD, password)
 
-    def input_birthdate(self, birthdate="01/31/1969"):
+    def input_birthdate(self, birthdate="1969-01-31"):
         self.input(CreateAccountLocators.INPUT_BIRTHDATE, birthdate)
 
+    def click_customer_privacy(self):
+        self.move_to_element(CreateAccountLocators.CHECKBOX_CUSTOMER_PRIVACY)
+        self.click(CreateAccountLocators.CHECKBOX_CUSTOMER_PRIVACY)
+
     def click_term(self):
-        self.move_to_element_and_click(CreateAccountLocators.CHECKBOX_TERMS)
+        self.move_to_element(CreateAccountLocators.CHECKBOX_TERMS)
+        self.click(CreateAccountLocators.CHECKBOX_TERMS)
 
     def click_save(self):
         self.move_to_element_and_click(CreateAccountLocators.BTN_SAVE)
@@ -56,9 +62,10 @@ class CreateAccount(Base):
         self.input_password(password)
         self.input_birthdate(birthdate)
         self.click_term()
+        self.click_customer_privacy()
         self.click_save()
 
-    def get_text_email_arleady_used(self):
+    def get_text_email_already_used(self):
         return self.get_text(CreateAccountLocators.TEXT_EMAIL_ALREADY_USED)
 
     def get_text_first_name(self):

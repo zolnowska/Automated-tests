@@ -17,6 +17,7 @@ def driver_init(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--incoginito')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         web_driver = webdriver.Chrome(executable_path='../webdriver/chromedriver', options=chrome_options)
     elif request.param == "firefox":
         firefox_options = Options()
@@ -70,7 +71,7 @@ class TestProductPage(BasicTest):
             product_page.input_quantity(1000000)
             assert product_page.get_current_price() == '£15.48'
             assert product_page.get_selected_paper_type_squarred() == 'Squarred'
-            assert product_page.get_product_availability() == ' There are not enough products in stock'
+            assert product_page.get_product_unavailability() == ' There are not enough products in stock'
         except Exception as e:
             day = datetime.now().strftime('%Y%m%d')
             name_dir = "../reports/" + day + "/TestProductPage/screenshots"

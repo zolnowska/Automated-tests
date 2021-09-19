@@ -14,12 +14,15 @@ class ProductPageLocators:
     BTN_SELECTED_SIZE = (By.XPATH, '//*[@id="group_1"]/option[@selected="selected"]')
     BTN_SELECTED_PAPER_SQUARRED = (By.XPATH, '//*[@id="group_4"]/option[@selected="selected" and @title="Squarred"]')
     BTN_ADD_TO_CART = (By.XPATH, '//button[@class="btn btn-primary add-to-cart"]')
-    RADIO_COLOR_WHITE = (By.XPATH, '//*[@id="group_2"]/li[1]/label')
-    RADIO_COLOR_BLACK = (By.XPATH, '//*[@id="group_2"]/li[2]/label')
+    RADIO_COLOR_WHITE = (By.XPATH, '//input[@class="input-color" and @title="White"]')
+    RADIO_COLOR_BLACK = (By.XPATH, '//input[@class="input-color" and @title="Black"]')
     INPUT_QUANTITY = (By.ID, 'quantity_wanted')
     TEXT_PRODUCT_AVAILABILITY = (By.ID, 'product-availability')
+    SYMBOL_PRODUCT_UNAVAILABILITY = (By.XPATH, '//span[@id="product-availability"]/i')
     BTN_INCREASE_QUANTITY = (By.XPATH, '//button[@class="btn btn-touchspin js-touchspin bootstrap-touchspin-up"]')
     BTN_DECREASE_QUANTITY = (By.XPATH, '//button[@class="btn btn-touchspin js-touchspin bootstrap-touchspin-down"]')
+    IMG_HUMMINGBIRD_PRINTED_TSHIRT_BLACK = \
+        (By.XPATH, '//img[@src="http://127.0.0.1/prestashop/1-large_default/hummingbird-printed-t-shirt.jpg"]')
 
     # Popup Add to Cart
     BTN_PROCEED_TO_CHECKOUT = (By.XPATH, '//a[@class="btn btn-primary"]')
@@ -41,9 +44,14 @@ class ProductPage(Base):
 
     def choose_color(self, color="white"):
         if color == "white":
-            self.move_to_element_and_click(ProductPageLocators.RADIO_COLOR_WHITE)
+            self.wait_until_element(ProductPageLocators.RADIO_COLOR_WHITE)
+            self.click(ProductPageLocators.RADIO_COLOR_WHITE)
         elif color == "black":
-            self.move_to_element_and_click(ProductPageLocators.RADIO_COLOR_BLACK)
+            self.wait_until_element(ProductPageLocators.RADIO_COLOR_BLACK)
+            self.click(ProductPageLocators.RADIO_COLOR_BLACK)
+
+    def wait_until_hummingbird_printed_tshirt(self):
+        self.wait_until_element(ProductPageLocators.IMG_HUMMINGBIRD_PRINTED_TSHIRT_BLACK)
 
     def get_current_price(self):
         return self.get_text(ProductPageLocators.TEXT_CURRENT_PRICE)
@@ -79,10 +87,17 @@ class ProductPage(Base):
     def get_product_availability(self, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
         return self.get_text(ProductPageLocators.TEXT_PRODUCT_AVAILABILITY, timeout)
 
+    def get_product_unavailability(self, timeout=DEFAULT_SELENIUM_WAIT_SECONDS):
+        self.wait_until_element(ProductPageLocators.SYMBOL_PRODUCT_UNAVAILABILITY)
+        return self.get_text(ProductPageLocators.TEXT_PRODUCT_AVAILABILITY, timeout)
+
     def click_add_to_cart(self):
+        self.wait_until_element(ProductPageLocators.BTN_ADD_TO_CART)
         self.move_to_element_and_click(ProductPageLocators.BTN_ADD_TO_CART)
 
     # POPUP
 
     def click_proceed_to_checkout(self):
+        self.wait_until_element(ProductPageLocators.BTN_PROCEED_TO_CHECKOUT)
+        self.wait_until_is_visibility(ProductPageLocators.BTN_PROCEED_TO_CHECKOUT)
         self.move_to_element_and_click(ProductPageLocators.BTN_PROCEED_TO_CHECKOUT)

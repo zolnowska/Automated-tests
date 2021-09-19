@@ -4,7 +4,8 @@ from lib.pages.base import Base
 
 class AccessoriesStationeryLocators:
 
-    BTN_MOUNTAIN_FOX_NOTEBOOK = (By.XPATH, '//*[@id="js-product-list"]/div[1]/article[1]/div/a')
+    BTN_MOUNTAIN_FOX_NOTEBOOK = (By.XPATH,
+                                 '//img[@src="http://127.0.0.1/prestashop/18-home_default/mountain-fox-notebook.jpg"]')
 
 
 class AccessoriesStationery(Base):

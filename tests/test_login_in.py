@@ -15,6 +15,7 @@ def driver_init(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--incoginito')
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         web_driver = webdriver.Chrome(executable_path='../webdriver/chromedriver', options=chrome_options)
     elif request.param == "firefox":
         firefox_options = Options()
