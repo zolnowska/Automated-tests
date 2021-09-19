@@ -110,8 +110,8 @@ idea.*
 reports.*
 
 # webdriver
-webdriver/chromedriver.exe
-webdriver/geckodriver.exe
+webdriver/sandbox/chromedriver.exe
+webdriver/sandbox/geckodriver.exe
 
 
 
