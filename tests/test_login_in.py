@@ -102,3 +102,59 @@ class TestLoginIn(BasicTest):
             self.driver.get_screenshot_as_file(name_dir +
                                                "/incorrect_password_%s.png" % now)
             raise e
+
+    def test_no_email_no_password(self):
+        self.driver.get(Urls.LOGIN_IN)
+        try:
+            login_in = LogIn(self.driver)
+            login_in.click_sign_in()
+            current_url = login_in.get_current_url()
+            assert current_url == Urls.LOGIN_IN
+        except Exception as e:
+            day = datetime.now().strftime('%Y%m%d')
+            name_dir = "../reports/" + day + "/TestLoginIn/screenshots"
+            try:
+                os.makedirs(name_dir)
+            except FileExistsError:
+                pass
+            now = datetime.now().strftime('%Y%m%d_%H%M%S')
+            self.driver.get_screenshot_as_file(name_dir + "/no_email_no_password_%s.png" % now)
+            raise e
+
+    def test_no_email(self):
+        self.driver.get(Urls.LOGIN_IN)
+        try:
+            login_in = LogIn(self.driver)
+            login_in.input_password("test12345")
+            login_in.click_sign_in()
+            current_url = login_in.get_current_url()
+            assert current_url == Urls.LOGIN_IN
+        except Exception as e:
+            day = datetime.now().strftime('%Y%m%d')
+            name_dir = "../reports/" + day + "/TestLoginIn/screenshots"
+            try:
+                os.makedirs(name_dir)
+            except FileExistsError:
+                pass
+            now = datetime.now().strftime('%Y%m%d_%H%M%S')
+            self.driver.get_screenshot_as_file(name_dir + "/no_email_%s.png" % now)
+            raise e
+
+    def test_no_password(self):
+        self.driver.get(Urls.LOGIN_IN)
+        try:
+            login_in = LogIn(self.driver)
+            login_in.input_email("test12345@mail.com")
+            login_in.click_sign_in()
+            current_url = login_in.get_current_url()
+            assert current_url == Urls.LOGIN_IN
+        except Exception as e:
+            day = datetime.now().strftime('%Y%m%d')
+            name_dir = "../reports/" + day + "/TestLoginIn/screenshots"
+            try:
+                os.makedirs(name_dir)
+            except FileExistsError:
+                pass
+            now = datetime.now().strftime('%Y%m%d_%H%M%S')
+            self.driver.get_screenshot_as_file(name_dir + "/no_password_%s.png" % now)
+            raise e
